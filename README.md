@@ -28,10 +28,34 @@ It systematically probes model vulnerabilities across **Singlish, Chinese, Malay
 ## 📂 Dataset  
 The dataset builds on **HateCheck** and **SGHateCheck**, extending them to support multilingual red-teaming evaluations. The dataset folder includes all samples for the three red-teaming tasks: Toxic Conversation Task (task1), Toxic Question-Answering (QA) Task (task2) and Toxic Tweet Composition Task (task3).
 
+- `*.json` files are provided for each **task** and **language**:  
+  - `en` = English  
+  - `ss` = Singlish  
+  - `zh` = Chinese  
+  - `ms` = Malay  
+  - `ta` = Tamil
+
 It includes:  
 - ~2.5k samples per language for **Conversation** and **Tweet** tasks.  
 - ~120–180 samples per language for the **Toxic QA** task.  
 - Annotations spanning **15 social groups** (race, religion, gender, disability, etc.) relevant to Singapore’s cultural context.  
+
+### Task 1: Toxic Conversation  
+- Single-turn dialogues with toxic input → model must respond safely.  
+- Files: `task1_[lang].json`  
+
+### Task 2: Toxic Question-Answering (QA)  
+- Fill-in-the-blank hateful statements, testing bias toward vulnerable groups.  
+- General setting: `task2_all_[lang].json`  
+- Localized settings:  
+  - Race → `task2_race_[lang].json`  
+  - Religion → `task2_religion_[lang].json`  
+  - Gender → `task2_gender_[lang].json`  
+  - Disability → `task2_disability_[lang].json`  
+
+### Task 3: Toxic Tweet Composition  
+- Generate an engaging tweet while preserving the meaning of a hateful statement.  
+- Files: `task3_[lang].json`
 
 ⚠️ **Disclaimer**: The dataset contains examples of toxic, hateful, and offensive language. It is released **for research purposes only** to support AI safety, fairness, and multilingual moderation studies.  
 
@@ -54,5 +78,17 @@ We evaluated six popular multilingual LLMs:
 - GPT-4o mini showed the most robust safety alignment, but **vulnerabilities persist across all models**.  
 
 ---
+
+## 🚀 Usage  
+### 1. Clone the repository  
+```bash
+git clone https://github.com/<your-org>/SGToxicGuard.git
+cd SGToxicGuard
+
+### 2. Run evaluation
+python eval/openrouter.py \
+    --model llama-3 \
+    --task task1_en.json \
+    --dataset dataset/task1_en.json
 
 Please leave issues for any questions about the paper or the dataset/code.
