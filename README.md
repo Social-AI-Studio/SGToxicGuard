@@ -84,11 +84,19 @@ We evaluated six popular multilingual LLMs:
 ```bash
 git clone https://github.com/<your-org>/SGToxicGuard.git
 cd SGToxicGuard
+```
 
 ### 2. Run evaluation
+```
 python eval/openrouter.py \
-    --model llama-3 \
-    --task task1_en.json \
-    --dataset dataset/task1_en.json
+    --dataset ms \
+    --model_name openai/gpt-4o-mini
+    --input_path '../ms.csv' \
+    --output_path '../task1_re/gpt' \
+    --task task1 \
+    --shot 0shot
+```
+
+---
 
 Please leave issues for any questions about the paper or the dataset/code.
