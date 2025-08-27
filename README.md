@@ -2,12 +2,12 @@
 
 A public repository containing datasets and code for the paper "Toxicity Red-Teaming: Benchmarking LLM Safety in Singapore’s Low-Resource Languages" (EMNLP 2025)
 
-![SGToxicGuard](https://github.com/Social-AI-Studio/SGToxicGuard/blob/main/5_new.png)
-
 ## 📌 Overview  
 SGToxicGuard is a **multilingual dataset and evaluation framework** for benchmarking the safety of Large Language Models (LLMs) in Singapore’s unique low-resource linguistic environment.  
 
 It systematically probes model vulnerabilities across **Singlish, Chinese, Malay, and Tamil**, in addition to English, using a **red-teaming approach** to test whether multilingual LLMs can resist generating toxic or biased outputs in realistic scenarios.  
+
+![SGToxicGuard](https://github.com/Social-AI-Studio/SGToxicGuard/blob/main/5_new.png)
 
 ---
 
