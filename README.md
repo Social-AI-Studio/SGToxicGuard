@@ -7,7 +7,7 @@ SGToxicGuard is a **multilingual dataset and evaluation framework** for benchmar
 
 It systematically probes model vulnerabilities across **Singlish, Chinese, Malay, and Tamil**, in addition to English, using a **red-teaming approach** to test whether multilingual LLMs can resist generating toxic or biased outputs in realistic scenarios.  
 
-<p align="left">
+<p align="center">
   <img src="https://github.com/Social-AI-Studio/SGToxicGuard/blob/main/5_new.png" alt="SGToxicGuard" width="60%"/>
 </p>
 
