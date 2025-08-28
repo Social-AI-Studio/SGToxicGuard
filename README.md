@@ -90,7 +90,7 @@ cd SGToxicGuard
 
 ### 2. Run evaluation
 ```
-python eval/openrouter.py \
+python eval/eval.py \
     --dataset ms \
     --model_name openai/gpt-4o-mini
     --input_path '../ms.csv' \
