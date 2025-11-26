@@ -105,10 +105,12 @@ python eval/llm_as_evaluator.py \
     --model SeaLLM-7B-Chat \
     --data_path '../ms-2shot.json' \
     --output_dir '../ms_seallm_2shot_task1.json' \
-    --input_csv '../ms_annotations.csv' \
+    --input_csv '../ms.csv' \
     --classi 'task1' \
 ```
-
+- task1: Toxic Conversation
+- task2: Toxic Question-Answering (QA)
+- task3: Toxic Tweet Composition  
 ---
 
 Please leave issues for any questions about the paper or the dataset/code.
