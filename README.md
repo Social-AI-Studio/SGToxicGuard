@@ -1,6 +1,6 @@
 # Toxicity Red-Teaming: Benchmarking LLM Safety in Singapore’s Low-Resource Languages
 
-A public repository containing datasets and code for the paper "Toxicity Red-Teaming: Benchmarking LLM Safety in Singapore’s Low-Resource Languages" (EMNLP 2025)
+A public repository containing datasets and code for the paper "Toxicity Red-Teaming: Benchmarking LLM Safety in Singapore’s Low-Resource Languages[https://aclanthology.org/2025.emnlp-main.612.pdf]" (EMNLP 2025)
 
 ## 📌 Overview  
 SGToxicGuard is a **multilingual dataset and evaluation framework** for benchmarking the safety of Large Language Models (LLMs) in Singapore’s unique low-resource linguistic environment.  
@@ -110,7 +110,12 @@ python eval/llm_as_evaluator.py \
 ```
 - task1: Toxic Conversation
 - task2: Toxic Question-Answering (QA)
-- task3: Toxic Tweet Composition  
+- task3: Toxic Tweet Composition
+
+### 4. Metrics Calculation
+- Find the last 'hateful_number' from output_dir
+- Hateful Response Rate = hateful_number / # total_samples
+
 ---
 
 Please leave issues for any questions about the paper or the dataset/code.
