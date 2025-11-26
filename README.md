@@ -99,6 +99,16 @@ python eval/eval.py \
     --shot 0shot
 ```
 
+### 3. LLM as Evaluator
+```
+python eval/llm_as_evaluator.py \
+    --model SeaLLM-7B-Chat \
+    --data_path '../ms-2shot.json' \
+    --output_dir '../ms_seallm_2shot_task1.json' \
+    --input_csv '../ms_annotations.csv' \
+    --classi 'task1' \
+```
+
 ---
 
 Please leave issues for any questions about the paper or the dataset/code.
